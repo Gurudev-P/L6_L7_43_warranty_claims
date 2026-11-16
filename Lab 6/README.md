@@ -1,19 +1,36 @@
-# L6_L7_43 — Warranty Claims
+# Lab 6 — Warranty Claims: Code and Branch Coverage
 
-Lab 6: Code and Branch Coverage
+## Objective
 
-## About
+Expand the starter pytest suite for the three functions in `warranty_claims.py` and measure statement and branch coverage.
 
-A small Python module that works out out-of-warranty repair charges by plan, product age and claim type, checks whether a claim can be filed and reports how close a claim is to missing its service deadline.
+The assigned repository README asks for 90–100% coverage. This solution tests normal inputs, invalid inputs, and the decision boundaries in all three functions.
 
 ## Files
 
-| File | Description |
-|------|-------------|
-| `warranty_claims.py` | The module under test |
-| `test_warranty_claims.py` | Starter test file |
+- `warranty_claims.py` — validated warranty-claims implementation.
+- `test_warranty_claims.py` — 35 parametrized pytest cases.
+- `requirements.txt` — pytest and coverage dependencies.
+- `pytest_results.txt` — clean test run output.
+- `coverage_report.txt` — clean statement and branch coverage output.
 
-Keep all your Lab 6 work in this `LAB6` folder. Lab 7 will be added to this repo later.
+## Run on macOS
 
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
+python -m pytest -q
+python -m coverage run --branch -m pytest -q
+python -m coverage report -m
+```
 
-Refer to the lab handout for instructions.
+## Verification
+
+The package was executed in a clean working directory:
+
+- Pytest: 35 tests passed.
+- `warranty_claims.py`: 100% statement coverage and 100% branch coverage.
+- Total measured coverage: 100%.
+
+Re-run the commands in your own fork and capture your own terminal output for any instructor-required evidence.
